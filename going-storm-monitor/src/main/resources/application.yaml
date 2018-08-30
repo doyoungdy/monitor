@@ -1,0 +1,44 @@
+server:
+  port: 8888
+
+#datasource: 
+#  master:
+#    url: jdbc:oracle:thin:@10.4.21.38:1521:orcl
+#    username: mina
+#    password: mina
+#    driverClassName: oracle.jdbc.driver.OracleDriver
+    
+spring:
+  redis: 
+    host: 10.209.8.126
+    port: 6379
+    database: 0
+    timeout: 0
+#    password: 
+    pool: 
+      max-active: 8
+      max-wait: -1
+      max-idle: 8
+      min-idle: 0
+  mail:
+    host: smtp.sina.com
+    port: 25
+    username: doyoungdy@sina.com
+    password: 1234Abcd
+    default-encoding: utf-8
+    properties: 
+      mail:
+        smtp:
+          auth: true
+#          starttls: 
+#            enable: true
+#            required: true
+    
+logging: 
+  path: /home/log/
+  file: going-storm-monitor
+  level: 
+    root: INFO
+    org: 
+      springframework: 
+        web: INFO

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration scan="true" scanPeriod="60 seconds" debug="false">
+	<contextName>logback</contextName>
+	<property name="log.path.prefix" value="${LOG_PATH}${LOG_FILE}" />
+	
+	<appender name="console" class="ch.qos.logback.core.ConsoleAppender">
+		<encoder>
+			<pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level - %msg%n</pattern>
+		</encoder>
+	</appender>
+	<appender name="file_debug" class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<encoder>
+			<pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level - %msg%n</pattern>
+		</encoder>
+		<filter class="ch.qos.logback.classic.filter.ThresholdFilter">  
+            <level>DEBUG</level>
+        </filter>
+		<file>${log.path.prefix}.debug.log</file>
+		
+		<rollingPolicy class="ch.qos.logback.core.rolling.FixedWindowRollingPolicy">
+　　　　		<fileNamePattern>${log.path.prefix}.debug.log.%i</fileNamePattern>
+　　　　　　	<minIndex>1</minIndex>
+　　　　　　 	<maxIndex>5</maxIndex>
+　　　　	</rollingPolicy>
+
+　　　　	<triggeringPolicy class="ch.qos.logback.core.rolling.SizeBasedTriggeringPolicy">
+　　　　		<maxFileSize>100MB</maxFileSize>
+　　　　	</triggeringPolicy>
+	</appender>
+	<appender name="file_info" class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<encoder>
+			<pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level - %msg%n</pattern>
+		</encoder>
+		<filter class="ch.qos.logback.classic.filter.ThresholdFilter">  
+            <level>INFO</level>   
+        </filter>
+		<file>${log.path.prefix}.info.log</file>
+		<rollingPolicy class="ch.qos.logback.core.rolling.FixedWindowRollingPolicy">
+　　　　		<fileNamePattern>${log.path.prefix}.info.log.%i</fileNamePattern>
+　　　　　　	<minIndex>1</minIndex>
+　　　　　　 	<maxIndex>5</maxIndex>
+　　　　	</rollingPolicy>
+
+　　　　	<triggeringPolicy class="ch.qos.logback.core.rolling.SizeBasedTriggeringPolicy">
+　　　　		<maxFileSize>50MB</maxFileSize>
+　　　　	</triggeringPolicy>
+	</appender>
+	<appender name="file_error" class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<encoder>
+			<pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level - %msg%n</pattern>
+		</encoder>
+		<filter class="ch.qos.logback.classic.filter.ThresholdFilter">  
+            <level>ERROR</level>  
+        </filter>
+		<file>${log.path.prefix}.error.log</file>
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<fileNamePattern>${log.path.prefix}.error.log.%d{yyyy-MM-dd}</fileNamePattern>
+			<maxHistory>15</maxHistory>
+		</rollingPolicy>
+	</appender>  
+
+	<root level="debug">
+		<appender-ref ref="console" />
+		<appender-ref ref="file_debug" />
+		<appender-ref ref="file_info" />
+		<appender-ref ref="file_error" />
+	</root>
+</configuration>

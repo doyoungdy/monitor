@@ -1,0 +1,29 @@
+FROM storm:1.2.2
+
+ADD  extlib/commons-codec-1.6.jar  extlib/commons-codec-1.6.jar 
+ADD  extlib/commons-lang-2.6.jar  extlib/commons-lang-2.6.jar 
+ADD  extlib/commons-lang3-3.4.jar  extlib/commons-lang3-3.4.jar 
+ADD  extlib/commons-logging-1.2.jar  extlib/commons-logging-1.2.jar 
+ADD  extlib/commons-pool2-2.4.2.jar  extlib/commons-pool2-2.4.2.jar 
+ADD  extlib/dubbo-2.5.8.jar  extlib/dubbo-2.5.8.jar 
+ADD  extlib/fastjson-1.2.29.jar  extlib/fastjson-1.2.29.jar 
+ADD  extlib/going-storm-rocketmq-0.0.1-SNAPSHOT.jar  extlib/going-storm-rocketmq-0.0.1-SNAPSHOT.jar 
+ADD  extlib/guava-13.0.1.jar  extlib/guava-13.0.1.jar 
+ADD  extlib/jackson-annotations-2.9.0.jar  extlib/jackson-annotations-2.9.0.jar 
+ADD  extlib/jackson-core-2.9.4.jar  extlib/jackson-core-2.9.4.jar 
+ADD  extlib/jackson-databind-2.9.4.jar  extlib/jackson-databind-2.9.4.jar 
+ADD  extlib/javassist-3.20.0-GA.jar  extlib/javassist-3.20.0-GA.jar 
+ADD  extlib/jedis-2.9.0.jar  extlib/jedis-2.9.0.jar 
+ADD  extlib/netty-3.2.5.Final.jar  extlib/netty-3.2.5.Final.jar 
+ADD  extlib/netty-all-4.0.42.Final.jar  extlib/netty-all-4.0.42.Final.jar 
+ADD  extlib/rocketmq-client-3.6.2.Final.jar  extlib/rocketmq-client-3.6.2.Final.jar 
+ADD  extlib/rocketmq-client-4.2.0.jar  extlib/rocketmq-client-4.2.0.jar 
+ADD  extlib/rocketmq-common-4.2.0.jar  extlib/rocketmq-common-4.2.0.jar 
+ADD  extlib/rocketmq-remoting-4.2.0.jar  extlib/rocketmq-remoting-4.2.0.jar 
+ADD  extlib/spring-aop-4.3.10.RELEASE.jar  extlib/spring-aop-4.3.10.RELEASE.jar 
+ADD  extlib/spring-beans-4.3.10.RELEASE.jar  extlib/spring-beans-4.3.10.RELEASE.jar 
+ADD  extlib/spring-context-4.3.10.RELEASE.jar  extlib/spring-context-4.3.10.RELEASE.jar 
+ADD  extlib/spring-core-4.3.10.RELEASE.jar  extlib/spring-core-4.3.10.RELEASE.jar 
+ADD  extlib/spring-expression-4.3.10.RELEASE.jar  extlib/spring-expression-4.3.10.RELEASE.jar 
+ADD  extlib/spring-web-4.3.10.RELEASE.jar  extlib/spring-web-4.3.10.RELEASE.jar 
+ADD  extlib/storm-redis-1.2.2.jar extlib/storm-redis-1.2.2.jar
