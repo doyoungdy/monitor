@@ -1,7 +1,7 @@
 version: '2'
 services:
   namesrv:
-    image: going/rocketmq-namesrv:4.2.0
+    image: going/rocketmq-namesrv:4.3.0
     ports:
       - 9876:9876
     volumes:
