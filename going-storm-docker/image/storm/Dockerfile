@@ -27,3 +27,4 @@ ADD  extlib/spring-core-4.3.10.RELEASE.jar  extlib/spring-core-4.3.10.RELEASE.ja
 ADD  extlib/spring-expression-4.3.10.RELEASE.jar  extlib/spring-expression-4.3.10.RELEASE.jar 
 ADD  extlib/spring-web-4.3.10.RELEASE.jar  extlib/spring-web-4.3.10.RELEASE.jar 
 ADD  extlib/storm-redis-1.2.2.jar extlib/storm-redis-1.2.2.jar
+ADD going-storm-0.0.1-SNAPSHOT.jar /topology.jar

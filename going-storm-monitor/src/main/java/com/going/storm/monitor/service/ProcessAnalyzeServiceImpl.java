@@ -27,7 +27,7 @@ public class ProcessAnalyzeServiceImpl implements ProcessAnalyzeService {
 	private static final String CONST_SPLIT_PROCESS = "_";
 	private static final String CONST_SPLIT_PROC_INFO = "\\|";
 	private static final String CONST_SPLIT_PROC_KV = ":";
-	public static final String[] DATE_TIME_FORMAT = new String[] {"yyyy-mm-dd hh:mm"};
+	public static final String[] DATE_TIME_FORMAT = new String[] {"yyyy-MM-dd HH:mm"};
 	private static final int PROCESS_UPDATE_FREQ = 1;
 
 	@Autowired

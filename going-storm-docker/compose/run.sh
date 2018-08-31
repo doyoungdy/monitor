@@ -11,11 +11,11 @@ docker run -d -m 1024m --name abinter-monitor-broker -p 10909:10909 -p 10911:109
 docker run -d -m 400m --name abinter-monitor-console -p 8080:8080 -e JAVA_OPTS=" -Drocketmq.config.namesrvAddr=10.209.8.126:9876 " styletang/rocketmq-console-ng:latest
 
 ##
-docker run -d -m 400m --name storm-resources -it -v D:/workspace-monitor/monitor-docker/image/storm/going-storm-0.0.1-SNAPSHOT.jar:/topology.jar ab/storm storm jar /topology.jar com.going.storm.topology.ResourceInfosTopology
+docker run -d -m 400m --name storm-resources -it ab/storm:1.0.1 storm jar /topology.jar com.going.storm.topology.ResourceInfosTopology
 
-docker run -d -m 400m --name storm-process -it -v D:/workspace-monitor/monitor-docker/image/storm/going-storm-0.0.1-SNAPSHOT.jar:/topology.jar ab/storm storm jar /topology.jar com.going.storm.topology.ProcessInfosTopology
+docker run -d -m 400m --name storm-process -it  ab/storm:1.0.1 storm jar /topology.jar com.going.storm.topology.ProcessInfosTopology
 
-docker run -d --name storm-monitor  -e JAVA_OPTS="-Xms128m -Xmx256m -XX:PermSize=32m -XX:MaxPermSize=64m" -p 8888:8888 -it ab/storm-monitor:4.3.0 
+docker run -d --name storm-monitor -p 8888:8888 -e JAVA_OPTS="-Xms128m -Xmx256m -XX:PermSize=32m -XX:MaxPermSize=64m"  ab/storm-monitor:4.3.1 
 
 docker run -d  --name abinter-monitor-namesrv -p 9876:9876 -e JAVA_OPTS="-Xms128m -Xmx256m -XX:PermSize=32m -XX:MaxPermSize=64m" -v E:/rocketmq/namesrv/master/logs:/opt/logs -v E:/rocketmq/namesrv/master/store:/opt/store going/rocketmq-namesrv:4.3.0
 
