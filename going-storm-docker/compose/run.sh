@@ -26,5 +26,5 @@ docker run -d --name abinter-monitor-console -p 8080:8080 -e JAVA_OPTS="-Xms128m
 ##--oom-kill-disable
 
 
-docker stop storm-process storm-resources storm-monitor abinter-monitor-console abinter-monitor-namesrv abinter-monitor-broker
-docker start abinter-monitor-namesrv abinter-monitor-broker abinter-monitor-console storm-process storm-resources storm-monitor
+docker stop storm-process storm-resources storm-monitor abinter-monitor-console abinter-monitor-namesrv abinter-monitor-broker going-monitor-redis
+docker start going-monitor-redis abinter-monitor-namesrv abinter-monitor-broker abinter-monitor-console storm-process storm-resources storm-monitor 

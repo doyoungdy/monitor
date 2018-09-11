@@ -79,7 +79,7 @@ public class ProcessAnalyzeServiceImpl implements ProcessAnalyzeService {
 			e.printStackTrace();
 		}
 		Date now = new Date();
-		if(now.before(date)) {
+		if(now.after(date)) {
 			sb.append("主机：[").append(hostIP).append("]进程[").append(processArray[0]).append("]_").append(processArray[1])//
 			.append("最新更新时间为").append(stasticdate).append(",已经有超过").append(PROCESS_UPDATE_FREQ).append("小时没有获取到进程信息，可能进程已经挂掉了，请关注。")//
 			.append("最近一次更新的进程详细信息为[").append(processInfo).append("]")//
