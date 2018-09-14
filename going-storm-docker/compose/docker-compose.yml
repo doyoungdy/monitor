@@ -25,3 +25,4 @@ services:
      - namesrv:namesrv
     environment:
      JAVA_OPTS: -Drocketmq.config.namesrvAddr=namesrv:9876 #-Dcom.rocketmq.sendMessageWithVIPChannel=false
+xxx
