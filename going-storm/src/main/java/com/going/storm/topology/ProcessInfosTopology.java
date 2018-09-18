@@ -20,7 +20,6 @@ public class ProcessInfosTopology {
 		properties.setProperty(SpoutConfig.CONSUMER_GROUP, "PROCESS_INFOS_CONSUMER_GRP");
 		properties.setProperty(SpoutConfig.CONSUMER_TOPIC, "PROCESS_INFO_TOPIC");
 		properties.setProperty(SpoutConfig.SCHEME,SpoutConfig.MESSAGE_SCHEME);
-		// RocketMqSpout spout = new RocketMqSpout(properties);
 		
 		properties.setProperty("REDIS_HOST", "10.209.8.126");
 		properties.setProperty("REDIS_PORT", "6379");

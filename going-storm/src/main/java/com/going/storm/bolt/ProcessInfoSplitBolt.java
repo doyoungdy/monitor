@@ -13,10 +13,10 @@ import org.apache.storm.rocketmq.spout.scheme.DefaultMessageScheme;
 import org.apache.storm.topology.OutputFieldsDeclarer;
 import org.apache.storm.tuple.Tuple;
 
-import clojure.main;
 import redis.clients.jedis.JedisCommands;
 
 /**
+ * 获取终端发来的资源利用信息， 将新获取的资源信息替换旧的资源信息。
  * 获取终端发来的资源利用信息， 将新获取的资源信息替换旧的资源信息。
  * 
  * @author Administrator
