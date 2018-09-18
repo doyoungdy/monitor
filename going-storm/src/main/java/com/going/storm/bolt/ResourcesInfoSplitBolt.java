@@ -12,13 +12,11 @@ import redis.clients.jedis.JedisCommands;
  * 获取终端发来的资源利用信息， 将新获取的资源信息替换旧的资源信息。
  * 
  * @author Administrator
- * @author Administrator
  *
  */
 public class ResourcesInfoSplitBolt extends AbstractRedisBolt {
   
 	private static final String REDIS_KEY_PREFIX = "RESOURCE_INFO_";
-	private static final String REDIS_KEY_PREFIX1 = "RESOURCE_INFO_";
 	
 	public ResourcesInfoSplitBolt(JedisPoolConfig config) {
 		super(config);

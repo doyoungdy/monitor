@@ -17,7 +17,6 @@ import redis.clients.jedis.JedisCommands;
 
 /**
  * 获取终端发来的资源利用信息， 将新获取的资源信息替换旧的资源信息。
- * 获取终端发来的资源利用信息， 将新获取的资源信息替换旧的资源信息。
  * 
  * @author Administrator
  *
@@ -28,7 +27,6 @@ public class ProcessInfoSplitBolt extends AbstractRedisBolt {
 	private static final String CONST_SPLIT_PROC_INFO = "\\|";
 	private static final String CONST_SPLIT_PROC_KV = ":";
 	public static final String[] DATE_TIME_FORMAT = new String[] { "yyyy-MM-dd HH:mm" };
-	public static final String[] DATE_TIME_FORMATT = new String[] { "yyyy-MM-dd HH:mm" };
 
 	public ProcessInfoSplitBolt(JedisPoolConfig config) {
 		super(config);
@@ -69,7 +67,6 @@ public class ProcessInfoSplitBolt extends AbstractRedisBolt {
 				returnInstance(jedisCommands);
 			}
 			this.collector.ack(tuple);
-			System.out.println("");
 		}
 	}
 
