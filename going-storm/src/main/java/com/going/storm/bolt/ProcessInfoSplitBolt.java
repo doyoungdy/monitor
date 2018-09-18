@@ -23,11 +23,12 @@ import redis.clients.jedis.JedisCommands;
  *
  */
 public class ProcessInfoSplitBolt extends AbstractRedisBolt {
-
+  
 	private static final String REDIS_KEY_PREFIX = "PROCESS_INFO_";
 	private static final String CONST_SPLIT_PROC_INFO = "\\|";
 	private static final String CONST_SPLIT_PROC_KV = ":";
 	public static final String[] DATE_TIME_FORMAT = new String[] { "yyyy-MM-dd HH:mm" };
+	public static final String[] DATE_TIME_FORMATT = new String[] { "yyyy-MM-dd HH:mm" };
 
 	public ProcessInfoSplitBolt(JedisPoolConfig config) {
 		super(config);

@@ -38,7 +38,6 @@ public class ProcessInfosTopology {
 
 		// 配置
 		Config conf = new Config();
-		// conf.put("wordsFile", args[0]);
 		conf.setDebug(false);
 
 		// 运行拓扑

@@ -15,8 +15,9 @@ import redis.clients.jedis.JedisCommands;
  *
  */
 public class ResourcesInfoSplitBolt extends AbstractRedisBolt {
-
+  
 	private static final String REDIS_KEY_PREFIX = "RESOURCE_INFO_";
+	private static final String REDIS_KEY_PREFIX1 = "RESOURCE_INFO_";
 	
 	public ResourcesInfoSplitBolt(JedisPoolConfig config) {
 		super(config);
