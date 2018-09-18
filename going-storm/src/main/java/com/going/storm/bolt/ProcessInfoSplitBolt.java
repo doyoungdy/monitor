@@ -46,6 +46,7 @@ public class ProcessInfoSplitBolt extends AbstractRedisBolt {
 			String tags = tuple.getStringByField(DefaultMessageScheme.FIELD_TAGS).trim();
 			if (!StringUtils.isEmpty(body)) {
 				String[] processInfoArray = body.split("\\|");
+				System.out.println("");
 				if (processInfoArray.length < 6) {
 					return;
 				}
