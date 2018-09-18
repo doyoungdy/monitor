@@ -68,6 +68,7 @@ public class ProcessInfoSplitBolt extends AbstractRedisBolt {
 				returnInstance(jedisCommands);
 			}
 			this.collector.ack(tuple);
+			System.out.println("");
 		}
 	}
 
